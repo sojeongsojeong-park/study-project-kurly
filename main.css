@@ -2,6 +2,7 @@
 body{
   width: 1400px;
   margin: auto;
+  overflow-x: hidden;
 }
 a{
   text-decoration: none;
@@ -61,7 +62,7 @@ header .gnb li a{
 }
 .csCenter{
   width: 80px;
-  height: 130px;
+  height: 150px;
   background-color: #fff;
   font-size: 12px;
   border: 1px solid #ddd;
@@ -70,12 +71,14 @@ header .gnb li a{
   right: 170px;
   top: 30px;
   display: none;
+  cursor: pointer;
+  z-index: 99;
 }
 .csCenter li{
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
-.csCenter li:last-child{
-  margin-bottom: 0px;
+.csCenter li:hover{
+  color: #5f0080;
 }
 header > h1 > img{
   width: 100px;
@@ -214,7 +217,81 @@ h2{
   font-size: 30px;
   font-weight: bold;
 }
-
+.gallery{
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
+  left: -70px;
+}
+.shopGallery{
+  margin: 20px;
+}
+.shopGallery li:first-child img{
+  width: 260px;
+  height: 320px;
+}
+.shopGallery li:nth-child(3){
+  font-size: 20px;
+  position: relative;
+  top: -20px;
+}
+.discount{
+  color: rgb(250, 98, 47);
+  font-weight: bold;
+  position: relative;
+  font-size: 22px;
+}
+.price{
+  font-size: 20px;
+  font-weight: bold;
+}
+.shopGallery li:nth-child(5){
+  position: relative;
+  top: 10px;
+  color: rgb(153, 153, 153);
+  text-decoration: line-through;
+}
+.addCart{
+  width: 45px;
+  height: 45px;
+  position: relative;
+  top: -70px;
+  left: 200px;
+  cursor: pointer;
+}
+/* side&top */
+#sideBar{
+  position: absolute;
+  right: 20px;
+  top: 630px;
+}
+#sideBar img{
+  width: 80px;
+}
+.sideBarMenu{
+  width: 80px;
+  height: 90px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: center;
+}
+.sideBarMenu li{
+  height: 29px;
+  font-size: 12px;
+  color: #333;
+  line-height: 29px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+.sideBarMenu li:last-child{
+  border-bottom: none;
+}
+.sideBarMenu li:hover{
+  color: #5f0080;
+}
 .goToTop{
   display: none;
   position: fixed;
