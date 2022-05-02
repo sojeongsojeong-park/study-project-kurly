@@ -38,44 +38,55 @@ header .flexBlank{
   flex-grow: 3;
 }
 header .gnb{
-  width: 40px;
+  width: 1px;
   height: 15px;
   display: flex;
   flex-grow: 1;
   margin-top: 5px;
 }
 header .gnb li{
-  flex-grow: 1;
+  width: 58px;
   text-align: center;
   line-height: 10px;
-  border-right: 1px solid #999;
+  flex-grow: 1;
+  /* border-right: 1px solid #999; */
   margin-top: 5px;
+}
+header .gnb li:first-child:after,
+header .gnb li:nth-child(2):after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 13px;
+  float: right;
+  background-color: #d8d8d8;
 }
 header .gnb li:first-child a{
   color: #5f0080;
 }
-header .gnb li:last-child{
-  border: none;
-}
 header .gnb li a{
   font-size: 12px;
 }
-.csCenter{
+#CS .csCenter{
   width: 80px;
   height: 150px;
   background-color: #fff;
   font-size: 12px;
   border: 1px solid #ddd;
   padding: 10px;
-  position: absolute;
-  right: 170px;
-  top: 30px;
+  position: relative;
+  right: 0px;
+  top: 10px;
   display: none;
   cursor: pointer;
   z-index: 99;
 }
-.csCenter li{
+#CS .csCenter li{
   margin-bottom: 15px;
+  width: 80px;
+}
+#CS .csCenter li::after{
+  display: none;
 }
 .csCenter li:hover{
   color: #5f0080;
@@ -83,13 +94,15 @@ header .gnb li a{
 header > h1 > img{
   width: 100px;
   display: block;
-  margin: 0 auto 30px;
+  position: relative;
+  top: -25px;
+  left: calc(50% - 50px);
 
 }
 
 /* nav */
 nav{
-  width: 100%;
+  width: 1400px;
   height: 30px;
   display: flex;
 }
@@ -102,7 +115,7 @@ nav .hamburger li{
   margin-top: 5px;
 }
 nav .allMenu{
-  width: 120px !important;
+  width: 120px;
   margin-left: 15px;
   line-height: 30px;
   font-size: 20px;
@@ -110,7 +123,7 @@ nav .allMenu{
 .sub{
   display: none;
   position: relative;
-  top: 20px;
+  top: 12px;
   left: -40px;
   width: 248px;
   height: 500px;
@@ -158,7 +171,7 @@ nav .menu li a{
   font-size: 20px;
   line-height: 30px;
 }
-nav input{
+.input{
   width: 250px;
   height: 35px;
   border-radius: 20px;
@@ -168,6 +181,13 @@ nav input{
   padding-left: 20px;
   margin-left: 30px;
   margin-top: -5px;
+}
+#nav input.inputBtn{
+  width: 35px;
+  height: 35px;
+  position: relative;
+  left: -45px;
+  top: -5px;
 }
 nav .extraMenu{
   display: flex;
@@ -181,22 +201,22 @@ nav .extraMenu li{
 .stickyOn{
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 0px;
+  width: 1440px;
   height: 50px;
-  padding: 30px 0 0 160px;
+  padding: 30px 0 0 170px;
   background-color: #fff;
   z-index: 999;
 }
 
 /* slideShow */
 #slideShow{
-  width: 1440px;
-  height: 280px;
+  width: 100%;
+  height: 300px;
   position: relative;
-  top: -40px;
-  left: -20px;
-  margin: 50px auto;
+  top: -60px;
+  left: 0px;
+  margin: 30px auto;
   overflow: hidden;
 }
 
@@ -208,6 +228,43 @@ nav .extraMenu li{
   width: 4320px;
   /* transition: left 0.5s ease-out; */
 }
+
+ #slideShow .slides .slide .active{
+   display: block;
+ }
+.prev{
+  width: 52px;
+  height: 52px;
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/arrow_banner_left_52_52.svg");
+  position: relative;
+  top: 110px;
+  left: 30px;
+  cursor: pointer;
+  display: none;
+}
+.next{
+  width: 52px;
+  height: 52px;
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/arrow_banner_right_52_52.svg");
+  position: relative;
+  top: 59px;
+  right: -1300px;
+  cursor: pointer;
+  display: none;
+}
+#page{
+  width: 75px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  border-radius: 20px;
+  color: #fff;
+  z-index: 99;
+  position: absolute;
+  top: 240px;
+  right: 70px;
+  background-color: rgba(0, 0, 0, 0.233);
+}
 /* 이 상품 어때요? */
 h2{
   width: 100%;
@@ -216,24 +273,56 @@ h2{
   background-color: #fff;
   font-size: 30px;
   font-weight: bold;
+  margin-top: -30px;
 }
-.gallery{
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.galleryCover{
+  width: 100%;
+  height: 450px;
   position: relative;
-  left: -70px;
+  top: 0;
+  left: 0px;
+  overflow: hidden;
 }
+
+.gallery{
+  position: absolute;
+  top: 0;
+  left: 1600px;
+  width: 1200px;
+  height: 480px;
+  background-color: #fff;
+  display: grid;
+  margin-left: 70px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.galleryOn{
+  transform: translateX(-1600px) !important;
+  transition: transform 1s;
+}
+/* .galleryPrev{
+  transform: translateX(1600px) !important;
+  transition: transform 1s;
+} */
+
 .shopGallery{
   margin: 20px;
+}
+.shopGallery li:first-child{
+  width: 260px;
+  height: 320px;
+  overflow: hidden;
 }
 .shopGallery li:first-child img{
   width: 260px;
   height: 320px;
+  transition: transform 1s linear;
+}
+.shopGallery li:first-child img:hover{
+  overflow: hidden;
+  transform: scale(110%);
 }
 .shopGallery li:nth-child(3){
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
   top: -20px;
 }
@@ -241,11 +330,13 @@ h2{
   color: rgb(250, 98, 47);
   font-weight: bold;
   position: relative;
-  font-size: 22px;
+  font-size: 20px;
+  margin-right: 10px;
 }
 .price{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+
 }
 .shopGallery li:nth-child(5){
   position: relative;
@@ -261,11 +352,44 @@ h2{
   left: 200px;
   cursor: pointer;
 }
+.gallery_prev{
+  width: 60px;
+  height: 60px;
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/arrow_list_left_60_60.svg");
+  position: relative;
+  top: -280px;
+  left: 60px;
+  cursor: pointer;
+  z-index: 7;
+}
+.gallery_next{
+  width: 60px;
+  height: 60px;
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/arrow_list_right_60_60.svg");
+  position: relative;
+  top: -340px;
+  left: 1220px;
+  cursor: pointer;
+  z-index: 7;
+}
+.adBanner{
+  width: 1150px;
+  position: relative;
+  left: calc(50% - 600px);
+}
+.adBanner img{
+  width: 100%;
+  height: 140px;
+  cursor: pointer;
+}
+
 /* side&top */
 #sideBar{
   position: absolute;
   right: 20px;
-  top: 630px;
+  top: 580px;
+  z-index: 80;
+  transition: 1s;
 }
 #sideBar img{
   width: 80px;
@@ -275,6 +399,7 @@ h2{
   height: 90px;
   margin-top: 10px;
   border: 1px solid #ddd;
+  background-color: #fff;
   box-sizing: border-box;
   text-align: center;
 }

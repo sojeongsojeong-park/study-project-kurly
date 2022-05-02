@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./main.css">
   <script defer src="./main.js"></script>
   <script defer src="./sideBar.js"></script>
+  <script defer src="./slide.js"></script>
+  <script defer src="./shoppingSlide.js"></script>
   <title>kurly</title>
 </head>
 <body>
@@ -20,21 +22,22 @@
       <ul class="gnb">
         <li><a href="#">회원가입</a></li>
         <li><a href="#">로그인</a></li>
-        <li id="CS"><a href="#">고객센터 ▾</a></li>
-      </ul>
-      <ul class="csCenter">
-        <li>공지사항</li>
-        <li>자주하는 질문</li>
-        <li>1:1 문의</li>
-        <li>대량주문 문의</li>
-        <li>상품 제안</li>
-        <li>에코포장 피드백</li>
+        <li id="CS"><a href="#">고객센터 ▾</a>
+          <ul class="csCenter">
+            <li>공지사항</li>
+            <li>자주하는 질문</li>
+            <li>1:1 문의</li>
+            <li>대량주문 문의</li>
+            <li>상품 제안</li>
+            <li>에코포장 피드백</li>
+          </ul>
+        </li>
       </ul>
     </div>
     <!-- logo img -->
     <h1><img src="./kurly images/logo_x2.png" alt="logo"></h1>
     <!-- nav -->
-    <nav id="nav" class="stickyOn">
+    <nav id="nav">
       <ul class="hamburger">
         <li></li>
         <li></li>
@@ -161,7 +164,8 @@
         <li><a href="#">알뜰쇼핑</a></li>
         <li><a href="#">특가/혜택</a></li>
       </ul>
-      <input type="text" placeholder="검색어를 입력해주세요.">
+      <input type="text" placeholder="검색어를 입력해주세요." class="input">
+      <input type="image" src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png" class="inputBtn">
       <ul class="extraMenu">
         <li><a id="delivery" href="#"><img src="./kurly images/ico_delivery_setting.svg" alt="delivery setting"></a></li>
         <li><a id="heartBtn" href="#"><img src="./kurly images/btn-heart-off.svg" alt="heart button"></a></li>
@@ -172,45 +176,144 @@
   <main role="main">
     <div id="slideShow">
       <ul class="slides">
-        <li class="slide"><img src="./kurly images/slide1.jpeg" alt="slide1"></li>
+        <li class="slide active"><img src="./kurly images/slide1.jpeg" alt="slide1"></li>
         <li class="slide"><img src="./kurly images/slide2.jpeg" alt="slide2"></li>
         <li class="slide"><img src="./kurly images/slide3.jpeg" alt="slide3"></li>
         <li class="slide"><img src="https://img-cf.kurly.com/banner/main/pc/img/36a5c617-0af0-449b-a478-a9026e536d47" alt="slide4"></li>
         <li class="slide"><img src="https://img-cf.kurly.com/banner/main/pc/img/ab3151c5-e8ec-4f78-a0ae-0f41d8efaa37" alt="slide5"></li>
       </ul>
+      <div class="prev"></div>
+      <div class="next"></div>
+      <div id="page"></div>
     </div>
     
     <!-- 이 상품 어때요? -->
     <h2>이 상품 어때요?</h2>
-    <ul class="gallery">
-      <ul class="shopGallery">
-        <li><img src="https://img-cf.kurly.com/shop/data/goods/1470879732522l0.jpg" alt="snack1"></li>
-        <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
-        <li>[오뗄두스] 구움과자 2종 </li>
-        <li><span class="price">2,200원</span></li>
+    <div class="galleryCover">
+      <ul class="gallery galleryOn">
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1640671745403l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[비비고] 썰은 배추김치(파우치) </li>
+          <li><span class="discount">18%</span><span class="price">5,740원</span></li>
+          <li><span>7,000원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1481529842446l0.jpg" alt="snack2"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[청오건강] 유기농 쌀가루</li>
+          <li><span class="discount">16%</span><span class="price">3,350원</span></li>
+          <li><span>3,990원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1463996583305l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[썬키스트] 고당도 오렌지 750g(3입/대과) </li>
+          <li><span class="discount">15%</span><span class="price">7,650원</span></li>
+          <li><span>9,000원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1607935872391l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[돈마루] 한돈 목살 구이용 300g(냉장)</li>
+          <li><span class="discount">15%</span><span class="price">8,415원</span></li>
+          <li><span>9,900원</span></li>
+        </ul>
       </ul>
-      <ul class="shopGallery">
-        <li><img src="https://img-cf.kurly.com/shop/data/goods/153682535743l0.jpg" alt="snack2"></li>
-        <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
-        <li>생 앙드레</li>
-        <li><span class="discount">14%</span><span class="price">14,490원</span></li>
-        <li><span>16,900원</span></li>
+      <ul class="gallery">
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1470879732522l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[오뗄두스] 구움과자 2종 </li>
+          <li><span class="price">2,200원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/153682535743l0.jpg" alt="snack2"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>생 앙드레</li>
+          <li><span class="discount">14%</span><span class="price">14,490원</span></li>
+          <li><span>16,900원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1647569733676l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>저탄소 GAP 성주참외 1.1kg (4입) </li>
+          <li><span class="discount">20%</span><span class="price">11,840원</span></li>
+          <li><span>14,800원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/big/201511/291_shop1_865273.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>생 모레 치즈</li>
+          <li><span class="discount">13%</span><span class="price">8,520원</span></li>
+          <li><span>9,800원</span></li>
+        </ul>
       </ul>
-      <ul class="shopGallery">
-        <li><img src="https://img-cf.kurly.com/shop/data/goods/1647569733676l0.jpg" alt="snack1"></li>
-        <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
-        <li>저탄소 GAP 성주참외 1.1kg (4입) </li>
-        <li><span class="discount">20%</span><span class="price">11,840원</span></li>
-        <li><span>14,800원</span></li>
+      <ul class="gallery">
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1637925199235l0.jpeg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>무농약 토마토 1KG </li>
+          <li><span class="discount">12%</span><span class="price">6,980원</span></li>
+          <li><span>7,980원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1510797780548l0.jpg" alt="snack2"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[네니아] 군만두</li>
+          <li><span class="discount">15%</span><span class="price">10,880원</span></li>
+          <li><span>12,800원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1647569733676l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>친환경 실파 200g</li>
+          <li><span class="discount">14%</span><span class="price">2,290원</span></li>
+          <li><span>2,690원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1648207291897l0.jpeg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[존쿡 델리미트] 바베큐 백립 450g(냉동)</li>
+          <li><span class="discount">10%</span><span class="price">14,850원</span></li>
+          <li><span>16,500원</span></li>
+        </ul>
       </ul>
-      <ul class="shopGallery">
-        <li><img src="https://img-cf.kurly.com/shop/data/goods/big/201511/291_shop1_865273.jpg" alt="snack1"></li>
-        <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
-        <li>생 모레 치즈</li>
-        <li><span class="discount">13%</span><span class="price">8,520원</span></li>
-        <li><span>9,800원</span></li>
+      <ul class="gallery">
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1622450202617l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[종가집] 담백한 나박김치 1.2kg</li>
+          <li><span class="discount">10%</span><span class="price">9,810원</span></li>
+          <li><span>10,900원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1479893759103l0.jpg" alt="snack2"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[테라오카] 계란에 뿌려먹는 간장</li>
+          <li><span class="discount">6%</span><span class="price">4,590원</span></li>
+          <li><span>4,900원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1502272106555l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[밤보네이처] 대용량 맥시 기저귀 7~12kg 1BOX (60EA*3)</li>
+          <li><span class="price">84,500원</span></li>
+        </ul>
+        <ul class="shopGallery">
+          <li><img src="https://img-cf.kurly.com/shop/data/goods/1516016273417l0.jpg" alt="snack1"></li>
+          <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
+          <li>[선물세트] 기순도 고추장 4구 세트</li>
+          <li><span class="discount">30%</span><span class="price">27,993원</span></li>
+          <li><span>39,990원</span></li>
+        </ul>
       </ul>
-    </ul>
+    </div>
+    <div class="gallery_prev"></div>
+    <div class="gallery_next"></div>
+    <div class="adBanner">
+      <img src="https://img-cf.kurly.com/banner/random-band/pc/img/80bdeef9-425c-4dfe-9a4e-dad6be7ac321" alt="adBanner">
+    </div>
     <!-- side&top -->
     <div id="sideBar">
       <img src="./kurly images/bnr_quick_20190403.png" alt="sideBar">
