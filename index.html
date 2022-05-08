@@ -10,187 +10,192 @@
   <script defer src="./sideBar.js"></script>
   <script defer src="./slide.js"></script>
   <script defer src="./shoppingSlide.js"></script>
+  <script defer src="./countDown.js"></script>
   <title>kurly</title>
 </head>
 <body>
-  <!-- header -->
-  <header>
-    <!-- gnb -->
-    <div class="top">
-      <div class="dawnDelivery"><img src="./kurly images/delivery_210801.png" alt="delivery"></div>
-      <div class="flexBlank"></div>
-      <ul class="gnb">
-        <li><a href="#">회원가입</a></li>
-        <li><a href="#">로그인</a></li>
-        <li id="CS"><a href="#">고객센터 ▾</a>
-          <ul class="csCenter">
-            <li>공지사항</li>
-            <li>자주하는 질문</li>
-            <li>1:1 문의</li>
-            <li>대량주문 문의</li>
-            <li>상품 제안</li>
-            <li>에코포장 피드백</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- logo img -->
-    <h1><img src="./kurly images/logo_x2.png" alt="logo"></h1>
-    <!-- nav -->
-    <nav id="nav">
-      <ul class="hamburger">
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <div class="allMenu">
-        전체 카테고리
-        <ul class="sub">
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/category/icon/pc/4cac7e99-834d-4204-a1bf-40e822c32d3e" alt="parentsday"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/category/icon/pc/2381cc02-4c0f-4d81-93f1-0f57b73f3628" alt="parentsday"></li>
-            <li>2022 감사의 달</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt="veggies"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt="veggies"></li>
-            <li>채소</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_fruit_inactive_pc@2x.1568684150.png" alt="fruit"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_fruit_active_pc@2x.1568684150.png" alt="fruit"></li>
-            <li>과일·견과·쌀</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_seafood_inactive_pc@2x.1568684352.png" alt="seafood"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_seafood_active_pc@2x.1568684353.png" alt="seafood"></li>
-            <li>수산·해산·건어물</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_meat_inactive_pc@2x.1568684452.png" alt="meat"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_meat_active_pc@2x.1568684452.png" alt="meat"></li>
-            <li>정육·계란</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_side_inactive_pc@2x.1572243579.png" alt="side"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_side_active_pc@2x.1572243579.png" alt="side"></li>
-            <li>국·반찬·메인요리</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_convenient_inactive_pc@2x.1572243542.png" alt="convenient"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_convenient_active_pc@2x.1572243543.png" alt="convenient"></li>
-            <li>샐러드·간편식</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_sauce_inactive_pc@2x.1572243594.png" alt="sauce"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_sauce_active_pc@2x.1572243594.png" alt="sauce"></li>
-            <li>면·양념·오일</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_snacks_inactive_pc@2x.1572243615.png" alt="snacks"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_snacks_active_pc@2x.1572243616.png" alt="snacks"></li>
-            <li>생수·음료·우유·커피</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_cookie_inactive_pc.1610074008.png" alt="cookie"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_cookie_active_pc.1610074008.png" alt="cookie"></li>
-            <li>간식·과자·떡</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_deli_inactive_pc@2x.1568687352.png" alt="deli"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_deli_active_pc@2x.1568687352.png" alt="deli"></li>
-            <li>베이커리·치즈·델리</li>
+  <div class="header">
+  
+    <!-- header -->
+    <header>
+      <!-- gnb -->
+      <div class="top">
+        <div class="dawnDelivery"><img src="./kurlyImages/delivery_210801.png" alt="delivery"></div>
+        <div class="flexBlank"></div>
+        <ul class="gnb">
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+          <li id="CS"><a href="#">고객센터 ▾</a>
+            <ul class="csCenter">
+              <li>공지사항</li>
+              <li>자주하는 질문</li>
+              <li>1:1 문의</li>
+              <li>대량주문 문의</li>
+              <li>상품 제안</li>
+              <li>에코포장 피드백</li>
             </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_health_inactive_pc@2x.1574645922.png" alt="health"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_health_active_pc@2x.1574645923.png" alt="health"></li>
-            <li>건강식품</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/category/icon/pc/07c19040-34ad-49ff-924a-c5007fe0f7c8" alt="wine"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/category/icon/pc/bea6cc13-61c3-490c-b25c-9feddd96e5ff" alt="wine"></li>
-            <li>와인</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/category/icon/pc/9bead7b8-2a7e-4a2f-910a-ebe5c8f5f4f0" alt="alchole"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/category/icon/pc/ee395c3c-2b71-4304-b730-7b7e09dd62a4" alt="alchole"></li>
-            <li>전통주</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_living_inactive_pc@2x.1588814089.png" alt="living"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_living_active_pc@2x.1588814090.png" alt="living"></li>
-            <li>생활용품·리빙·캠핑</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_beauty_inactive_pc.1618488987.png" alt="beauty"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_beauty_active_pc.1618488987.png" alt="beauty"></li>
-            <li>스킨케어·메이크업</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_body_inactive_pc.1618528534.png" alt="body"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_body_active_pc.1618528534.png" alt="body"></li>
-            <li>헤어·바디·구강</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_kitchen_inactive_pc@2x.1574646457.png" alt="kitchen"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_kitchen_active_pc@2x.1574646458.png" alt="kitchen"></li>
-            <li>주방용품</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_electronic__inactive_pc@2x.1574417978.png" alt="electronic"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_electronic__active_pc@2x.1574417978.png" alt="electronic"></li>
-            <li>가전제품</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_pet_inactive_pc@2x.1587442293.png" alt="pet"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_pet_active_pc@2x.1587442294.png" alt="pet"></li>
-            <li>반려동물</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://img-cf.kurly.com/shop/data/category/icon_kids_inactive_pc@2x.1568687537.png" alt="kids"></li>
-            <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_kids_active_pc@2x.1568687537.png" alt="kids"></li>
-            <li>베이비·키즈·완구</li>
-          </ul>
-          <ul class="sublist">
-            <li><img src="https://res.kurly.com/pc/service/common/1908/ico_recommend_v2.png" alt="recommend"></li>
-            <li class="sublistOff"><img src="https://res.kurly.com/pc/service/common/1908/ico_recommend_on_v2.png" alt="recommend"></li>
-            <li>컬리의 추천</li>
-          </ul>
+          </li>
         </ul>
       </div>
-      <ul class="menu">
-        <li><a href="#">신상품</a></li>
-        <li><a href="#">베스트</a></li>
-        <li><a href="#">알뜰쇼핑</a></li>
-        <li><a href="#">특가/혜택</a></li>
-      </ul>
-      <input type="text" placeholder="검색어를 입력해주세요." class="input">
-      <input type="image" src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png" class="inputBtn">
-      <ul class="extraMenu">
-        <li><a id="delivery" href="#"><img src="./kurly images/ico_delivery_setting.svg" alt="delivery setting"></a></li>
-        <li><a id="heartBtn" href="#"><img src="./kurly images/btn-heart-off.svg" alt="heart button"></a></li>
-        <li><a id="cart" href="#"><img src="./kurly images/ico_cart.svg" alt="cart"></a></li>
-      </ul>
-    </nav>
-  </header>
-  <main role="main">
+      <!-- logo img -->
+      <h1><img src="./kurlyImages/logo_x2.png" alt="logo"></h1>
+      <!-- nav -->
+      <nav id="nav">
+        <ul class="hamburger">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="allMenu">
+          전체 카테고리
+          <ul class="sub">
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/category/icon/pc/4cac7e99-834d-4204-a1bf-40e822c32d3e" alt="parentsday"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/category/icon/pc/2381cc02-4c0f-4d81-93f1-0f57b73f3628" alt="parentsday"></li>
+              <li>2022 감사의 달</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt="veggies"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt="veggies"></li>
+              <li>채소</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_fruit_inactive_pc@2x.1568684150.png" alt="fruit"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_fruit_active_pc@2x.1568684150.png" alt="fruit"></li>
+              <li>과일·견과·쌀</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_seafood_inactive_pc@2x.1568684352.png" alt="seafood"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_seafood_active_pc@2x.1568684353.png" alt="seafood"></li>
+              <li>수산·해산·건어물</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_meat_inactive_pc@2x.1568684452.png" alt="meat"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_meat_active_pc@2x.1568684452.png" alt="meat"></li>
+              <li>정육·계란</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_side_inactive_pc@2x.1572243579.png" alt="side"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_side_active_pc@2x.1572243579.png" alt="side"></li>
+              <li>국·반찬·메인요리</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_convenient_inactive_pc@2x.1572243542.png" alt="convenient"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_convenient_active_pc@2x.1572243543.png" alt="convenient"></li>
+              <li>샐러드·간편식</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_sauce_inactive_pc@2x.1572243594.png" alt="sauce"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_sauce_active_pc@2x.1572243594.png" alt="sauce"></li>
+              <li>면·양념·오일</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_snacks_inactive_pc@2x.1572243615.png" alt="snacks"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_snacks_active_pc@2x.1572243616.png" alt="snacks"></li>
+              <li>생수·음료·우유·커피</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_cookie_inactive_pc.1610074008.png" alt="cookie"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_cookie_active_pc.1610074008.png" alt="cookie"></li>
+              <li>간식·과자·떡</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_deli_inactive_pc@2x.1568687352.png" alt="deli"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_deli_active_pc@2x.1568687352.png" alt="deli"></li>
+              <li>베이커리·치즈·델리</li>
+              </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_health_inactive_pc@2x.1574645922.png" alt="health"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_health_active_pc@2x.1574645923.png" alt="health"></li>
+              <li>건강식품</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/category/icon/pc/07c19040-34ad-49ff-924a-c5007fe0f7c8" alt="wine"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/category/icon/pc/bea6cc13-61c3-490c-b25c-9feddd96e5ff" alt="wine"></li>
+              <li>와인</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/category/icon/pc/9bead7b8-2a7e-4a2f-910a-ebe5c8f5f4f0" alt="alchole"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/category/icon/pc/ee395c3c-2b71-4304-b730-7b7e09dd62a4" alt="alchole"></li>
+              <li>전통주</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_living_inactive_pc@2x.1588814089.png" alt="living"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_living_active_pc@2x.1588814090.png" alt="living"></li>
+              <li>생활용품·리빙·캠핑</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_beauty_inactive_pc.1618488987.png" alt="beauty"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_beauty_active_pc.1618488987.png" alt="beauty"></li>
+              <li>스킨케어·메이크업</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_body_inactive_pc.1618528534.png" alt="body"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_body_active_pc.1618528534.png" alt="body"></li>
+              <li>헤어·바디·구강</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_kitchen_inactive_pc@2x.1574646457.png" alt="kitchen"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_kitchen_active_pc@2x.1574646458.png" alt="kitchen"></li>
+              <li>주방용품</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_electronic__inactive_pc@2x.1574417978.png" alt="electronic"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_electronic__active_pc@2x.1574417978.png" alt="electronic"></li>
+              <li>가전제품</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_pet_inactive_pc@2x.1587442293.png" alt="pet"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_pet_active_pc@2x.1587442294.png" alt="pet"></li>
+              <li>반려동물</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://img-cf.kurly.com/shop/data/category/icon_kids_inactive_pc@2x.1568687537.png" alt="kids"></li>
+              <li class="sublistOff"><img src="https://img-cf.kurly.com/shop/data/category/icon_kids_active_pc@2x.1568687537.png" alt="kids"></li>
+              <li>베이비·키즈·완구</li>
+            </ul>
+            <ul class="sublist">
+              <li><img src="https://res.kurly.com/pc/service/common/1908/ico_recommend_v2.png" alt="recommend"></li>
+              <li class="sublistOff"><img src="https://res.kurly.com/pc/service/common/1908/ico_recommend_on_v2.png" alt="recommend"></li>
+              <li>컬리의 추천</li>
+            </ul>
+          </ul>
+        </div>
+        <ul class="menu">
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">베스트</a></li>
+          <li><a href="#">알뜰쇼핑</a></li>
+          <li><a href="#">특가/혜택</a></li>
+        </ul>
+        <input type="text" placeholder="검색어를 입력해주세요." class="input">
+        <input type="image" src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png" class="inputBtn">
+        <ul class="extraMenu">
+          <li><a id="delivery" href="#"><img src="./kurlyImages/ico_delivery_setting.svg" alt="delivery setting"></a></li>
+          <li><a id="heartBtn" href="#"><img src="./kurlyImages/btn-heart-off.svg" alt="heart button"></a></li>
+          <li><a id="cart" href="#"><img src="./kurlyImages/ico_cart.svg" alt="cart"></a></li>
+        </ul>
+      </nav>
+    </header>
+</div>
+
     <div id="slideShow">
       <ul class="slides">
-        <li class="slide active"><img src="./kurly images/slide1.jpeg" alt="slide1"></li>
-        <li class="slide"><img src="./kurly images/slide2.jpeg" alt="slide2"></li>
-        <li class="slide"><img src="./kurly images/slide3.jpeg" alt="slide3"></li>
-        <li class="slide"><img src="https://img-cf.kurly.com/banner/main/pc/img/36a5c617-0af0-449b-a478-a9026e536d47" alt="slide4"></li>
-        <li class="slide"><img src="https://img-cf.kurly.com/banner/main/pc/img/ab3151c5-e8ec-4f78-a0ae-0f41d8efaa37" alt="slide5"></li>
+        <li class="slide"><div id="slide1"></div></li>
+        <li class="slide"><div id="slide2"></div></li>
+        <li class="slide"><div id="slide3"></div></li>
+        <li class="slide"><div id="slide4"></div></li>
+        <li class="slide"><div id="slide5"></div></li>
       </ul>
+      <div class="clear"></div>
       <div class="prev"></div>
       <div class="next"></div>
       <div id="page"></div>
     </div>
-    
+  <main role="main"></main>
     <!-- 이 상품 어때요? -->
     <h2>이 상품 어때요?</h2>
     <div class="galleryCover">
-      <ul class="gallery galleryOn">
+      <ul class="gallery productGallery galleryOn">
         <ul class="shopGallery">
           <li><img src="https://img-cf.kurly.com/shop/data/goods/1640671745403l0.jpg" alt="snack1"></li>
           <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
@@ -220,7 +225,7 @@
           <li><span>9,900원</span></li>
         </ul>
       </ul>
-      <ul class="gallery">
+      <ul class="productGallery gallery">
         <ul class="shopGallery">
           <li><img src="https://img-cf.kurly.com/shop/data/goods/1470879732522l0.jpg" alt="snack1"></li>
           <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
@@ -249,7 +254,7 @@
           <li><span>9,800원</span></li>
         </ul>
       </ul>
-      <ul class="gallery">
+      <ul class="productGallery gallery">
         <ul class="shopGallery">
           <li><img src="https://img-cf.kurly.com/shop/data/goods/1637925199235l0.jpeg" alt="snack1"></li>
           <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
@@ -279,7 +284,7 @@
           <li><span>16,500원</span></li>
         </ul>
       </ul>
-      <ul class="gallery">
+      <ul class="productGallery gallery">
         <ul class="shopGallery">
           <li><img src="https://img-cf.kurly.com/shop/data/goods/1622450202617l0.jpg" alt="snack1"></li>
           <li class="addCart"><img src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg" alt="addCart"></li>
@@ -350,7 +355,7 @@
     
     <!-- side&top -->
     <div id="sideBar">
-      <img src="./kurly images/bnr_quick_20190403.png" alt="sideBar">
+      <img src="./kurlyImages/bnr_quick_20190403.png" alt="sideBar">
       <ul class="sideBarMenu">
         <li>등급별 혜택</li>
         <li>레시피</li>
@@ -405,25 +410,25 @@
           대량주문 문의 : <span><a href="mailto:kurlygift@kurlycorp.com">kurlygift@kurlycorp.com</a></span>
         </p>
         <ul class="sns">
-          <li><a href="#"><img src="./kurly images/ico_instagram.png" alt="instagram"></a></li>
-          <li><a href="#"><img src="./kurly images/ico_fb.png" alt="facebook"></a></li>
-          <li><a href="#"><img src="./kurly images/ico_blog.png" alt="blog"></a></li>
-          <li><a href="#"><img src="./kurly images/ico_naverpost.png" alt="post"></a></li>
-          <li><a href="#"><img src="./kurly images/ico_youtube.png" alt="youtube"></a></li>
+          <li><a href="#"><img src="./kurlyImages/ico_instagram.png" alt="instagram"></a></li>
+          <li><a href="#"><img src="./kurlyImages/ico_fb.png" alt="facebook"></a></li>
+          <li><a href="#"><img src="./kurlyImages/ico_blog.png" alt="blog"></a></li>
+          <li><a href="#"><img src="./kurlyImages/ico_naverpost.png" alt="post"></a></li>
+          <li><a href="#"><img src="./kurlyImages/ico_youtube.png" alt="youtube"></a></li>
         </ul>
       </div>
     </div>
     <div class="partner">
       <ul>
         <li>
-          <img src="./kurly images/isms_220310.png" alt="isms" style="width:50px">
+          <img src="./kurlyImages/isms_220310.png" alt="isms" style="width:50px">
           <span>[인증범위]마켓컬리 쇼핑몰 서비스 개발・운영<br>
           [유효기간]2022.01.19 ~ 2025.01.18</span>  
         </li>
-        <li><img src="./kurly images/logo_eprivacyplus.png" alt="privacy" style="width:50px">
+        <li><img src="./kurlyImages/logo_eprivacyplus.png" alt="privacy" style="width:50px">
           <span>개인정보보호 우수 웹사이트・<br>
             개인정보처리시스템 인증(ePRIVACY PLUS)</span>  </li>
-        <li><img src="./kurly images/logo_payments.png" alt="payments" style="height:50px">
+        <li><img src="./kurlyImages/logo_payments.png" alt="payments" style="height:50px">
           <span>고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한<br>
             토스 페이먼츠 구매안전(에스크로)서비스를 이용하실 수 있습니다.</span>  
         </li>
