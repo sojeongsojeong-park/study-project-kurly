@@ -3,7 +3,7 @@ const slides = document.querySelector(".slides");
 const slide = document.querySelectorAll(".slide");
 
 let currentSlide = 0;
-let sliding = setInterval( function () {
+let sliding = setInterval( function() {
   let from = -(innerWidth * currentSlide);
   let to = from - innerWidth;
   slides.animate({
@@ -29,14 +29,13 @@ const next = document.querySelector(".next");
 
 slider.addEventListener("mouseenter",function(){
   clearInterval(sliding);
-  clearInterval(numbering)
   prev.style.display = "block";
   next.style.display = "block";
 })
 slider.addEventListener("mouseleave",function(){
-
   prev.style.display = "none";
   next.style.display = "none";
+  setInterval(sliding);
 })
 
 

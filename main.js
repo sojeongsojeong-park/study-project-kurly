@@ -29,17 +29,6 @@ gotoTop.addEventListener("click", function(){
   document.documentElement.scrollTop = 0;
 })
 
-//submenu
-let allMenu = document.getElementsByClassName("allMenu");
-let sub = document.getElementsByClassName("sub");
-allMenu[0].addEventListener("mouseenter", function(){
-  sub[0].style.display = "block";
-})
-
-sub[0].addEventListener("mouseleave", function(){
-  sub[0].style.display = "none";
-})
-
 
 // let subLi = document.querySelectorAll(".sublist");
 // subLi.addEventListener("mouseenter", function(){
