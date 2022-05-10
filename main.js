@@ -29,13 +29,22 @@ gotoTop.addEventListener("click", function(){
   document.documentElement.scrollTop = 0;
 })
 
+let cart = document.getElementById("cart");
+let heartBtn = document.getElementById("heartBtn");
+console.log(cart.firstElementChild.src)
 
-// let subLi = document.querySelectorAll(".sublist");
-// subLi.addEventListener("mouseenter", function(){
-//   this.classList.add("sublistOn");
-//   this.nextElementSibling.classList.remove("sublistOff");
-// })
-
+cart.addEventListener("mouseenter", function(){
+  cart.firstElementChild.src = "https://res.kurly.com/pc/service/common/2011/ico_cart_on.svg?v=1"
+})
+cart.addEventListener("mouseleave", function(){
+  cart.firstElementChild.src = "./kurlyImages/ico_cart.svg"
+})
+heartBtn.addEventListener("mouseenter", function(){
+  heartBtn.firstElementChild.src = "https://res.kurly.com/pc/service/pick/btn-heart-hover.svg"
+})
+heartBtn.addEventListener("mouseleave", function(){
+  heartBtn.firstElementChild.src = "./kurlyImages/btn-heart-off.svg"
+})
 
 
 
