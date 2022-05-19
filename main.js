@@ -26,7 +26,7 @@ window.addEventListener("scroll", function(){
 })
 
 gotoTop.addEventListener("click", function(){
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({left: 0, top: 0, behavior:"smooth"})
 })
 
 let cart = document.getElementById("cart");

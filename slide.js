@@ -28,15 +28,10 @@ const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 
 slider.addEventListener("mouseenter",function(){
-  clearInterval(sliding);
   prev.style.display = "block";
   next.style.display = "block";
 })
 slider.addEventListener("mouseleave",function(){
   prev.style.display = "none";
   next.style.display = "none";
-  setInterval(sliding);
 })
-
-
-

@@ -339,10 +339,10 @@ h2{
   transform: translateX(-1600px) !important;
   transition: transform 1s;
 }
-/* .galleryPrev{
+.galleryPrev{
   transform: translateX(1600px) !important;
   transition: transform 1s;
-} */
+}
 
 .shopGallery{
   margin: 20px;
@@ -488,6 +488,7 @@ h2{
 }
 .goToTop{
   display: none;
+  cursor: pointer;
   position: fixed;
   bottom: 20px;
   right: 20px;
