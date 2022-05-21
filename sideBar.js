@@ -10,9 +10,9 @@ window.onresize = function(){
 
 window.addEventListener("scroll", function(event){
   let y = window.pageYOffset;
-  let num = Number(y) + 180
+  //let num = Number(y) + 180
   if(y > 690){
-    sideBar.style.top = num + "px";
+    sideBar.style.top = y + 180 + "px";
     sideBar.style.display = "block";
   }else{
     sideBar.style.top = "670px"

@@ -13,7 +13,6 @@ Gnext.addEventListener("click", function(event){
   Gnext.style.top = "-340px";
 
   let currentGallery = document.getElementsByClassName("galleryOn")[0];
-  console.log(currentGallery)
   let nextGallery = currentGallery.nextElementSibling;
 
   if(nextGallery == null){

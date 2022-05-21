@@ -3,13 +3,10 @@ const timer = document.getElementById("timer");
 function countDown() {
   let now = new Date();
   let end = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
-  let open = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 00, 00, 01);
-
   let nt = now.getTime();
-  let ot = open.getTime();
   let et = end.getTime();
 
-  if(nt>ot){
+  if(nt<et){
     let sec = parseInt(et - nt) / 1000;
     let day = parseInt(sec/60/60/24);
     let secToHour = (sec - (day*60*60*24));
